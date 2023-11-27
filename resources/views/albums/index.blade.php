@@ -35,17 +35,14 @@
                                 </td>
                                 <td class="px-6 py-4 text-right text-sm">
                                     <div class="flex justify-end items-center">
-
                                         <a href="{{route('albums.edit',$album->id)}}" class="bg-gray-500 hover:bg-gray-700 py-1 px-2 mr-1 text-white rounded-lg">Edit</a>
                                         <form method="POST" action="{{route('albums.destroy',$album->id)}}">
                                             @csrf
                                             @method('DELETE')
-                                            <button href="{{route('albums.destroy',$album->id)}}" class="bg-red-700 hover:bg-red-500 py-1 px-2 text-white rounded-lg">Delete</button>
+                                            <button href="{{route('albums.destroy',$album->id)}}" class="bg-red-600 hover:bg-red-500  py-1 px-2 text-white rounded-lg">Delete</button>
 
                                         </form>
                                     </div>
-
-
                                 </td>
                             </tr>
                         @endforeach

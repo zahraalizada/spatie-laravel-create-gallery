@@ -37,6 +37,7 @@ Route::post('albums/{album}/upload',[AlbumController::class, 'upload'])->name('a
 Route::get('/albums/{album}/images/{image}', [AlbumController::class, 'showImage'])->name('album.image.show')->middleware('auth');
 Route::delete('/albums/{album}/image/{image}', [AlbumController::class, 'destroyImage'])->name('album.image.destroy');
 
-// Video Controller
+
+// Video Routes
 Route::resource('/videos', VideoController::class)->middleware('auth');
 

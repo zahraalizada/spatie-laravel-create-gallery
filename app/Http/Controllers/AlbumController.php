@@ -73,14 +73,13 @@ class AlbumController extends Controller
         return redirect()->back();
     }
 
+
     public function upload(Request $request, Album $album){
         if($request->has('image')){
             $album->addMedia($request->image)->toMediaCollection();
         }
         return redirect()->back();
     }
-
-
     public function showImage (Album $album, $id){
         $media =$album->getMedia();
         $image = $media->where('id',$id)->first();
